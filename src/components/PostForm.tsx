@@ -6,7 +6,7 @@ export default function PostForm() {
     const [salary, setSalary] = useState<number>(0)
     const navigate = useNavigate()
 
-    const CATEGORIES = ['事務', 'エンジニア', '営業', 'デザイン', 'マーケティング'];
+    const CATEGORIES = ['事務', 'エンジニア', '営業', 'デザイン', 'マーケティング', '財務・経理', '人事', 'カスタマーサポート', '製造', '医療・介護']
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()

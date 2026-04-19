@@ -23,7 +23,7 @@ export default function JobList() {
         fetchJob()
     },[categories, minSalary])
 
-    const CATEGORIES = ['事務', 'エンジニア', '営業', 'デザイン', 'マーケティング']
+    const CATEGORIES = ['事務', 'エンジニア', '営業', 'デザイン', 'マーケティング', '財務・経理', '人事', 'カスタマーサポート', '製造', '医療・介護']
 
     const handleCategoryChange = (category:string) => {
         setCategories(prev => 
