@@ -12,7 +12,7 @@ export default function PostForm() {
         e.preventDefault()
         const jobData = { job: { title, category, salary } }
         try {
-            const res = await fetch('http://localhost:3000/api/v1/jobs', {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/jobs`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(jobData)
