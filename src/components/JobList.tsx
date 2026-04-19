@@ -33,7 +33,7 @@ export default function JobList() {
 
     return (
         <div className="container mx-auto flex py-8 px-4 gap-8">
-            <aside className="font-bold mb-4 border-b pb-2 w-64">
+            <aside className="font-bold mb-4 border-b pb-2 w-32">
               <section>
                 <h2 className="font-bold mb-4 border-b pb-2">求人カテゴリ</h2>
                 <div className="space-y-2">
