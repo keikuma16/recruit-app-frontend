@@ -46,15 +46,15 @@ export default function JobList() {
                 </div>
               </section>
               <section>
-                <h2 className="font-bold mb-4 border-b pb-2">年収（以上）</h2>
+                <h2 className="font-bold mb-4 border-b pb-2">年収</h2>
                 <select
                   className="w-full border rounded p-2" 
                   onChange={(e) => setMinsalary(Number(e.target.value))}
                 >
                   <option value="0">全選択</option>
-                  <option value="300">300万円</option>
-                  <option value="500">500万円</option>
-                  <option value="700">700万円</option>
+                  <option value="300">300万円以上</option>
+                  <option value="500">500万円以上</option>
+                  <option value="700">700万円以上</option>
                 </select>
               </section>
             </aside>
