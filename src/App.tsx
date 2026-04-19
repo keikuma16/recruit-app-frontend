@@ -8,7 +8,7 @@ function App() {
       <header className="bg-slate-800 text-white p-4 flex justify-between items-center">
         <h1 className="text-xl font-bold">求人検索アプリ</h1>
         <nav className="space-x-4">
-          <Link to="/" className="hover:underline">求人検索</Link>
+          <Link to="/" className="hover:underline">求人一覧</Link>
           <Link to="/post" className="hover:underline">求人投稿</Link>
         </nav>
       </header>
