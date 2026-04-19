@@ -10,10 +10,10 @@ export default function JobList() {
         categories.forEach(c => params.append('categories[]', c))
         if(minSalary > 0) params.append('min_salary', minSalary.toString())
         try{
-        const res = await fetch (`http://localhost:3000/api/v1/jobs?${params.toString()}`)
+        const res = await fetch (`${import.meta.env.VITE_API_URL}/api/v1/jobs?${params.toString()}`)
         const data = await res.json()
         setJobs(data)
-        console.log(`http://localhost:3000/api/v1/jobs?${params.toString()}`)
+        console.log(`${import.meta.env.VITE_API_URL}/api/v1/jobs?${params.toString()}`)
         }catch(err){
         console.error("通信エラー:", err)
         }  
