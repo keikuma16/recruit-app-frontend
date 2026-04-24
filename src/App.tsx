@@ -1,6 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom'
 import PostForm from "./components/PostForm";
 import JobList from "./components/JobList";
+import JobSerch from "./components/JobSerch";
 
 function App() {
   return(
@@ -12,10 +13,19 @@ function App() {
           <Link to="/post" className="hover:underline">求人投稿</Link>
         </nav>
       </header>
-      <Routes>
-        <Route path="/" element={<JobList />} />
-        <Route path="/post" element={<PostForm />} />
-      </Routes>
+      <main className='container mx-auto p-4'>
+        <Routes>
+          <Route path="/" element={
+            <div className='flex items-start gap-8'>
+              <aside className="font-bold mb-4 border-b pb-2 w-32">
+                <JobSerch />
+              </aside>
+              <JobList />
+            </div>
+          } />
+          <Route path="/post" element={<PostForm />} />
+        </Routes>
+      </main>
     </div>
   )
 }
