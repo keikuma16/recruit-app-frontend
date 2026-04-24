@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react"
 import type { Job } from '../types/job'
-export default function JobList() {
+export default function JobList({ categories, minSalary }: { categories: string[]; minSalary: number }) {
     const [jobs, setJobs] = useState<Job[]>([])
-    const [categories, setCategories] = useState<string[]>([])
-    const [minSalary, setMinsalary] = useState<number>(0)
 
     const fetchJob = async () => {
         const params = new URLSearchParams()

@@ -1,9 +1,4 @@
-import { useState } from "react"
-
-export default function JobSearch() {  
-    const [categories, setCategories] = useState<string[]>([])
-    const [minSalary, setMinsalary] = useState<number>(0)
-    
+export default function JobSearch({ setCategories, setMinSalary }: { setCategories: React.Dispatch<React.SetStateAction<string[]>>; setMinSalary: React.Dispatch<React.SetStateAction<number>> }) {  
     const CATEGORIES = ['事務', 'エンジニア', '営業', 'デザイン', 'マーケティング', '財務・経理', '人事', 'カスタマーサポート', '製造', '医療・介護']
 
     const handleCategoryChange = (category:string) => {
@@ -29,7 +24,7 @@ export default function JobSearch() {
                 <h2 className="font-bold mb-4 border-b pb-2">年収</h2>
                 <select
                 className="w-full border rounded p-2" 
-                onChange={(e) => setMinsalary(Number(e.target.value))}
+                onChange={(e) => setMinSalary(Number(e.target.value))}
                 >
                 <option value="0">全選択</option>
                 <option value="300">300万円以上</option>
