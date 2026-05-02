@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 export default function PostForm() {
     const [title, setTitle] = useState<string>('')
-    const [category, setCategory] = useState<string>('')
+    const [category, setCategory] = useState<string>('事務')
     const [salary, setSalary] = useState<number>(0)
     const navigate = useNavigate()
 
@@ -68,7 +68,6 @@ export default function PostForm() {
                 <button 
                 type="submit"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition-colors"
-                onClick={handleSubmit}
                 >
                     投稿
                 </button>
