@@ -15,11 +15,11 @@ function App() {
         <h1 className="text-xl font-bold">求人検索アプリ</h1>
         <nav className="space-x-4">
           {location.pathname === '/post' ? (
-            <Link to="/" className="hover:underline text-sm">
+            <Link to="/" className="hover:underline">
               求人一覧
             </Link>
           ) : (
-            <Link to="/post" className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-bold transition-colors text-sm">
+            <Link to="/post" className="hover:underline">
               求人投稿
             </Link>
           )}
