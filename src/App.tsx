@@ -20,10 +20,10 @@ function App() {
         <Routes>
           <Route path="/" element={
             <div className='flex items-start gap-8'>
-              <aside className="font-bold mb-4 border-b pb-2  flex-shrink-0">
+              <aside className="font-bold mb-4 border-b pb-2 flex-shrink-0 w-[120px]">
                 <JobSerch setCategories={setCategories} setMinSalary={setMinSalary} />
               </aside>
-              <div className="flex-1 w-190px">
+              <div className="flex-1 min-w-0">
                 <JobList categories={categories} minSalary={minSalary} />
               </div>
             </div>
