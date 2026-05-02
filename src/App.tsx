@@ -20,10 +20,12 @@ function App() {
         <Routes>
           <Route path="/" element={
             <div className='flex items-start gap-8'>
-              <aside className="font-bold mb-4 border-b pb-2 w-32">
+              <aside className="font-bold mb-4 border-b pb-2 w-30">
                 <JobSerch setCategories={setCategories} setMinSalary={setMinSalary} />
               </aside>
-              <JobList categories={categories} minSalary={minSalary} />
+              <div className="flex-1">
+                <JobList categories={categories} minSalary={minSalary} />
+              </div>
             </div>
           } />
           <Route path="/post" element={<PostForm />} />
