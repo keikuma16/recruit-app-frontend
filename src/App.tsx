@@ -3,8 +3,10 @@ import PostForm from "./components/PostForm";
 import JobList from "./components/JobList";
 import JobSerch from "./components/JobSerch";
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom'
 
 function App() {
+  const location = useLocation()
   const [categories, setCategories] = useState<string[]>([])
   const [minSalary, setMinSalary] = useState<number>(0)
   return(
@@ -12,7 +14,15 @@ function App() {
       <header className="bg-slate-800 text-white p-4 flex justify-between items-center">
         <h1 className="text-xl font-bold">求人検索アプリ</h1>
         <nav className="space-x-4">
-          <Link to="/post" className="hover:underline">求人投稿</Link>
+          {location.pathname === '/post' ? (
+            <Link to="/" className="hover:underline text-sm">
+              求人一覧
+            </Link>
+          ) : (
+            <Link to="/post" className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-bold transition-colors text-sm">
+              求人投稿
+            </Link>
+          )}
         </nav>
       </header>
       <main className='container mx-auto p-4'>
