@@ -38,9 +38,9 @@ export default function PostForm() {
                     <label className='block font-bold mb-2 text-gray700'>求人タイトル</label>
                     <input 
                     type="text"
-                     onChange={(e) => setTitle(e.target.value)} 
-                     className='w-full border p-2 focus:ring-2 focus:ring-slate-500 outline-none rounded'
-                     />
+                    onChange={(e) => setTitle(e.target.value)} 
+                    className='w-full border p-2 focus:ring-2 focus:ring-slate-500 outline-none rounded'
+                    />
                 </div>
                 <div>
                     <label className='block font-bold mb-2 text-gray700'>カテゴリ</label>
@@ -67,7 +67,8 @@ export default function PostForm() {
                 </div>
                 <button 
                 type="submit"
-                className='bg-slate-500 hover:bg-slate-600 text-white font-bold py-2 px-4 rounded mx-auto block'
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition-colors"
+                onClick={handleSubmit}
                 >
                     投稿
                 </button>
